@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class cursosPlace : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class cursosPlace : MonoBehaviour
     public LayerMask button;
     private Vector2 cursorPos;
     private SpriteRenderer colorChange;
+    public int room;
 
 
     public void Start()
@@ -18,6 +20,27 @@ public class cursosPlace : MonoBehaviour
 
     private void Update()
     {
+        RaycastHit2D restart = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, button);
+
+        if(restart)
+        {
+            if (restart.collider.tag == "Restart")
+            {
+                opacity.color = new Color(1f, 1f, 1f, 1f);
+
+                cursorPos = restart.collider.gameObject.transform.position;
+                pointer.transform.position = new Vector2(cursorPos.x, cursorPos.y);
+                colorChange = restart.collider.GetComponent<SpriteRenderer>();
+
+                if (Input.GetButton("Fire1"))
+                {
+                    SceneManager.LoadScene(room);
+                    gameStates.restarted = true;
+                }
+            }
+        }
+
+
         if (gameStates.noControl == false && pauseMenu.gamePaused == false)
         {
 
@@ -123,6 +146,7 @@ public class cursosPlace : MonoBehaviour
                     }
                 }
             }
+
 
             if(gameStates.noControl == true)
             {

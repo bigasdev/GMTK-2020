@@ -6,15 +6,19 @@ using UnityEngine.SceneManagement;
 public class pauseButtons : MonoBehaviour
 {
     public int room;
+    public GameObject pauseUI;
     
     public void Resume()
     {
-        pauseMenu.gamePaused = false;
+        pauseUI.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     public void Restart()
     {
         SceneManager.LoadScene(room);
+        Time.timeScale = 1f;
+        gameStates.restarted = true;
     }
 
     public void Quit()

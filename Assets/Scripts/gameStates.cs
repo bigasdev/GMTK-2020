@@ -13,4 +13,26 @@ public class gameStates : MonoBehaviour
     public static bool noF;
     public static bool noControl;
     public static int key;
+    public static bool restarted;
+
+    private void Update()
+    {
+        if(restarted)
+        {
+            Restart();
+        }
+    }
+
+    public void Restart()
+    {
+        noA = false;
+        noD = false;
+        noS = false;
+        noW = false;
+        noE = false;
+        noF = false;
+        noControl = false;
+        key = 0;
+        restarted = false;
+    }
 }
