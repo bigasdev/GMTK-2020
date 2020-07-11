@@ -8,6 +8,7 @@ public class cursosPlace : MonoBehaviour
     public GameObject pointer;
     public LayerMask button;
     private Vector2 cursorPos;
+    private SpriteRenderer colorChange;
 
 
     public void Start()
@@ -32,11 +33,13 @@ public class cursosPlace : MonoBehaviour
 
                     cursorPos = hit.collider.gameObject.transform.position;
                     pointer.transform.position = new Vector2(cursorPos.x, cursorPos.y);
+                    colorChange = hit.collider.GetComponent<SpriteRenderer>();
 
                     if (Input.GetButton("Fire1"))
                     {
                         gameStates.noW = true;
                         gameStates.noControl = true;
+                        colorChange.color = new Color(0f, 0f, 0f, 1f);
                     }
                 }
 
@@ -46,11 +49,13 @@ public class cursosPlace : MonoBehaviour
 
                     cursorPos = hit.collider.gameObject.transform.position;
                     pointer.transform.position = new Vector2(cursorPos.x, cursorPos.y);
+                    colorChange = hit.collider.GetComponent<SpriteRenderer>();
 
                     if (Input.GetButton("Fire1"))
                     {
                         gameStates.noA = true;
                         gameStates.noControl = true;
+                        colorChange.color = new Color(0f, 0f, 0f, 1f);
                     }
                 }
 
@@ -60,11 +65,13 @@ public class cursosPlace : MonoBehaviour
 
                     cursorPos = hit.collider.gameObject.transform.position;
                     pointer.transform.position = new Vector2(cursorPos.x, cursorPos.y);
+                    colorChange = hit.collider.GetComponent<SpriteRenderer>();
 
                     if (Input.GetButton("Fire1"))
                     {
                         gameStates.noS = true;
                         gameStates.noControl = true;
+                        colorChange.color = new Color(0f, 0f, 0f, 1f);
                     }
                 }
 
@@ -74,11 +81,13 @@ public class cursosPlace : MonoBehaviour
 
                     cursorPos = hit.collider.gameObject.transform.position;
                     pointer.transform.position = new Vector2(cursorPos.x, cursorPos.y);
+                    colorChange = hit.collider.GetComponent<SpriteRenderer>();
 
                     if (Input.GetButton("Fire1"))
                     {
                         gameStates.noD = true;
                         gameStates.noControl = true;
+                        colorChange.color = new Color(0f, 0f, 0f, 1f);
                     }
                 }
 
@@ -88,11 +97,13 @@ public class cursosPlace : MonoBehaviour
 
                     cursorPos = hit.collider.gameObject.transform.position;
                     pointer.transform.position = new Vector2(cursorPos.x, cursorPos.y);
+                    colorChange = hit.collider.GetComponent<SpriteRenderer>();
 
                     if (Input.GetButton("Fire1"))
                     {
                         gameStates.noE = true;
                         gameStates.noControl = true;
+                        colorChange.color = new Color(0f, 0f, 0f, 1f);
                     }
                 }
 
@@ -102,11 +113,13 @@ public class cursosPlace : MonoBehaviour
 
                     cursorPos = hit.collider.gameObject.transform.position;
                     pointer.transform.position = new Vector2(cursorPos.x, cursorPos.y);
+                    colorChange = hit.collider.GetComponent<SpriteRenderer>();
 
                     if (Input.GetButton("Fire1"))
                     {
                         gameStates.noF = true;
                         gameStates.noControl = true;
+                        colorChange.color = new Color(0f, 0f, 0f, 1f);
                     }
                 }
             }

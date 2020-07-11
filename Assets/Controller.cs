@@ -7,7 +7,7 @@ public class Controller : MonoBehaviour
 
     [SerializeField] Vector2 playerInput;
     Rigidbody2D rb;
-
+    public Animator anim;
     public float movSpeed;
 
     void Start()
@@ -27,6 +27,7 @@ public class Controller : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.F) && gameStates.noF == false)
             {
                 Debug.Log("Attack");
+                anim.SetTrigger("Attack");
             }
         }
     }
@@ -43,6 +44,7 @@ public class Controller : MonoBehaviour
                 if (playerInput.x == -1)
                 {
                     movSpeed = 0;
+                    anim.SetBool("walk", true);
                 }
                 else
                 {
@@ -84,6 +86,15 @@ public class Controller : MonoBehaviour
                 {
                     movSpeed = 6;
                 }
+            }
+
+            if(playerInput.x == 1 || playerInput.x == -1 || playerInput.y == 1 || playerInput.x == -1)
+            {
+                anim.SetBool("walk", true);
+            }
+            else
+            {
+                anim.SetBool("walk", false);
             }
 
             rb.velocity = playerInput.normalized * movSpeed;
