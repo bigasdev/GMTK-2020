@@ -10,6 +10,7 @@ public class Controller : MonoBehaviour
     public Animator anim;
     public float movSpeed;
     public enemyPatrol ep;
+    public usableThings ut;
 
     void Start()
     {
@@ -23,16 +24,24 @@ public class Controller : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.E) && gameStates.noE == false)
             {
-                Debug.Log("Use");
+                if (ut != null)
+                {
+                    if (ut.onDoor == true)
+                    {
+                        ut.Open();
+                    }
+                }
             }
             if (Input.GetKeyDown(KeyCode.F) && gameStates.noF == false)
             {
                 anim.SetTrigger("Attack");
                 
-                if(ep.onGuard == true)
-                {
-                    ep.Attack();
-                }                
+                if(ep != null){
+                    if (ep.onGuard == true)
+                    {
+                        ep.Attack();
+                    }
+                }
             }
         }
     }
