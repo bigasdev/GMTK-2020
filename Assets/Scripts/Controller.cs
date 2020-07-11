@@ -9,6 +9,7 @@ public class Controller : MonoBehaviour
     Rigidbody2D rb;
     public Animator anim;
     public float movSpeed;
+    public enemyPatrol ep;
 
     void Start()
     {
@@ -26,8 +27,12 @@ public class Controller : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.F) && gameStates.noF == false)
             {
-                Debug.Log("Attack");
                 anim.SetTrigger("Attack");
+                
+                if(ep.onGuard == true)
+                {
+                    ep.Attack();
+                }                
             }
         }
     }
