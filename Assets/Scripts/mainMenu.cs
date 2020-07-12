@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class mainMenu : MonoBehaviour
 {
     public GameObject logo;
+    public GameObject MainMenu;
+    public GameObject creditsMenu;
     public void Play()
     {
         SceneManager.LoadScene(1);
@@ -19,7 +21,14 @@ public class mainMenu : MonoBehaviour
 
     public void Credits()
     {
+        creditsMenu.SetActive(true);
+        MainMenu.SetActive(false);
+    }
 
+    public void Back()
+    {
+        creditsMenu.SetActive(false);
+        MainMenu.SetActive(true);
     }
 
     public void Quit()
