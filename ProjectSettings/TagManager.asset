@@ -13,6 +13,7 @@ TagManager:
   - Restart
   - Bag
   - Scratch
+  - Door
   layers:
   - Default
   - TransparentFX

@@ -14,6 +14,7 @@ public class Controller : MonoBehaviour
     public GameObject scratch;
     public scrathBreak sb;
     private GameObject[] scrathL;
+    private GameObject[] doorL;
 
 
     void Start()
@@ -24,12 +25,21 @@ public class Controller : MonoBehaviour
     private void Update()
     {
         scrathL = GameObject.FindGameObjectsWithTag("Scratch");
+        doorL = GameObject.FindGameObjectsWithTag("Door");
 
         foreach(GameObject scrat in scrathL)
         {
             if (Vector2.Distance(scrat.transform.position, transform.position) < 1)
             {
                 sb = scrat.GetComponent<scrathBreak>();
+            }
+        }
+
+        foreach (GameObject door in doorL)
+        {
+            if (Vector2.Distance(door.transform.position, transform.position) < 1)
+            {
+                ut = door.GetComponent<usableThings>();
             }
         }
 

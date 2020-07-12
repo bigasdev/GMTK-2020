@@ -14,12 +14,17 @@ public class gameStates : MonoBehaviour
     public static bool noControl;
     public static int key;
     public static bool restarted;
+    public static bool respawned;
 
     private void Update()
     {
         if(restarted)
         {
             Restart();
+        }
+        if(respawned)
+        {
+            Reseta();
         }
     }
 
@@ -34,5 +39,17 @@ public class gameStates : MonoBehaviour
         noControl = false;
         key = 0;
         restarted = false;
+    }
+
+    public void Reseta()
+    {
+        noA = false;
+        noD = false;
+        noS = false;
+        noW = false;
+        noE = false;
+        noF = false;
+        noControl = false;
+        respawned = false;
     }
 }
