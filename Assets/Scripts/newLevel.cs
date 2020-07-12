@@ -11,6 +11,7 @@ public class newLevel : MonoBehaviour
         
         Time.timeScale = 0f;
         endUI.SetActive(true);
+        gameStates.key = 0;
     }
 
 }

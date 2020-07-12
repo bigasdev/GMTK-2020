@@ -10,6 +10,7 @@ public class cursosPlace : MonoBehaviour
     public LayerMask button;
     private Vector2 cursorPos;
     private SpriteRenderer colorChange;
+    public pauseMenu ps;
     public int room;
 
 
@@ -34,8 +35,8 @@ public class cursosPlace : MonoBehaviour
 
                 if (Input.GetButton("Fire1"))
                 {
-                    SceneManager.LoadScene(room);
                     gameStates.restarted = true;
+                    SceneManager.LoadScene(room);                   
                 }
             }
 
@@ -49,7 +50,7 @@ public class cursosPlace : MonoBehaviour
 
                 if (Input.GetButton("Fire1"))
                 {
-                    pauseMenu.gamePaused = true;
+                    ps.Pause();
                 }
             }
         }

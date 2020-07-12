@@ -2418,6 +2418,7 @@ MonoBehaviour:
   anim: {fileID: 663572226}
   movSpeed: 6
   ep: {fileID: 0}
+  ut: {fileID: 0}
 --- !u!212 &663572224
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2794,6 +2795,7 @@ MonoBehaviour:
   button:
     serializedVersion: 2
     m_Bits: 256
+  ps: {fileID: 664002529}
   room: 1
 --- !u!212 &717815269
 SpriteRenderer:
@@ -3387,12 +3389,12 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 27
-    m_Data: {fileID: 11400000, guid: ae4d5c3db7b577646a705bd810e443e0, type: 2}
+    m_Data: {fileID: 11400000, guid: e2606d67e4897f649a0e38005db081f7, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 27
-    m_Data: {fileID: 21300000, guid: 00c9dce64129abb4b95bcb38cebec479, type: 3}
+    m_Data: {fileID: 21300000, guid: bc6796ea7aadb5a488be30f6a54ada6c, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 27
     m_Data:

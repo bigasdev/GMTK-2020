@@ -2346,6 +2346,7 @@ MonoBehaviour:
   button:
     serializedVersion: 2
     m_Bits: 256
+  ps: {fileID: 664002529}
   room: 2
 --- !u!212 &717815269
 SpriteRenderer:
