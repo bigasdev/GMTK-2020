@@ -38,6 +38,20 @@ public class cursosPlace : MonoBehaviour
                     gameStates.restarted = true;
                 }
             }
+
+            if (restart.collider.tag == "Bag")
+            {
+                opacity.color = new Color(1f, 1f, 1f, 1f);
+
+                cursorPos = restart.collider.gameObject.transform.position;
+                pointer.transform.position = new Vector2(cursorPos.x, cursorPos.y);
+                colorChange = restart.collider.GetComponent<SpriteRenderer>();
+
+                if (Input.GetButton("Fire1"))
+                {
+                    pauseMenu.gamePaused = true;
+                }
+            }
         }
 
 

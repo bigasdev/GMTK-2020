@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Kitchen.unity
     guid: 6f064011ef58aa944898adca2c376671
   - enabled: 1
-    path: Assets/Scenes/Next.unity
+    path: Assets/Scenes/Police.unity
     guid: ff62ac86c69a22f4092f070acfffdf9e
+  - enabled: 1
+    path: Assets/Prefabs/Next 1.unity
+    guid: 49140979f9f7d18479b652b65ffc53c4
   m_configObjects: {}
