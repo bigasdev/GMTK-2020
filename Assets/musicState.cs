@@ -15,7 +15,7 @@ public class musicState : MonoBehaviour
         }
         else
         {
-            music.volume = .35f;
+            music.volume = .25f;
         }
 
     }
