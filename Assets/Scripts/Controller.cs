@@ -15,6 +15,7 @@ public class Controller : MonoBehaviour
     public scrathBreak sb;
     private GameObject[] scrathL;
     private GameObject[] doorL;
+    private GameObject[] policeL;
 
     public GameObject walko;
     public GameObject swingo;
@@ -38,6 +39,7 @@ public class Controller : MonoBehaviour
     {
         scrathL = GameObject.FindGameObjectsWithTag("Scratch");
         doorL = GameObject.FindGameObjectsWithTag("Door");
+        policeL = GameObject.FindGameObjectsWithTag("Police");
 
         walko = GameObject.Find("Walk");
         swingo = GameObject.Find("Swing");
@@ -55,6 +57,13 @@ public class Controller : MonoBehaviour
             brak = brako.GetComponent<AudioSource>();
         }
 
+        foreach (GameObject police in policeL)
+        {
+            if (Vector2.Distance(police.transform.position, transform.position) < 1)
+            {
+                ep = police.GetComponent<enemyPatrol>();
+            }
+        }
 
         foreach (GameObject scrat in scrathL)
         {
