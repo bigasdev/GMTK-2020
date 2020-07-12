@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Collect.unity
     guid: 49140979f9f7d18479b652b65ffc53c4
+  - enabled: 1
+    path: Assets/Scenes/Scratch.unity
+    guid: 3b9c85b664add2e4f93fd59131135675
   m_configObjects: {}
