@@ -12,6 +12,7 @@ TagManager:
   - F
   - Restart
   - Bag
+  - Scratch
   layers:
   - Default
   - TransparentFX

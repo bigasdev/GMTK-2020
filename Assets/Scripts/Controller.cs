@@ -11,6 +11,10 @@ public class Controller : MonoBehaviour
     public float movSpeed;
     public enemyPatrol ep;
     public usableThings ut;
+    public GameObject scratch;
+    public scrathBreak sb;
+    private GameObject[] scrathL;
+
 
     void Start()
     {
@@ -19,6 +23,17 @@ public class Controller : MonoBehaviour
 
     private void Update()
     {
+        scrathL = GameObject.FindGameObjectsWithTag("Scratch");
+
+        foreach(GameObject scrat in scrathL)
+        {
+            if (Vector2.Distance(scrat.transform.position, transform.position) < 1)
+            {
+                sb = scrat.GetComponent<scrathBreak>();
+            }
+        }
+
+
         if (gameStates.noControl)
         {
 
@@ -40,6 +55,14 @@ public class Controller : MonoBehaviour
                     if (ep.onGuard == true)
                     {
                         ep.Attack();
+                    }
+                }
+
+                if(sb != null)
+                {
+                    if(sb.onScratch == true)
+                    {
+                        sb.Break();
                     }
                 }
             }
