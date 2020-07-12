@@ -8,15 +8,23 @@ public class mainMenu : MonoBehaviour
     public GameObject logo;
     public GameObject MainMenu;
     public GameObject creditsMenu;
+    public AudioSource click;
     public void Play()
     {
         SceneManager.LoadScene(1);
         logo.SetActive(false);
     }
 
-    public void Level()
+    public void Music()
     {
-
+        if(musicState.isMuted == true)
+        {
+            musicState.isMuted = false;
+        }
+        else
+        {
+            musicState.isMuted = true;
+        }
     }
 
     public void Credits()
@@ -34,5 +42,10 @@ public class mainMenu : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void Click()
+    {
+        click.Play();
     }
 }
