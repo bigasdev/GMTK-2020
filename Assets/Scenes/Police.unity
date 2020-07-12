@@ -2256,7 +2256,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0037831962, y: -0.03783214}
+  m_Offset: {x: -0.024953842, y: -0.042066336}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2267,7 +2267,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8562377, y: 0.9243357}
+  m_Size: {x: 0.6699352, y: 0.84812117}
   m_EdgeRadius: 0
 --- !u!114 &663572223
 MonoBehaviour:
@@ -2286,6 +2286,18 @@ MonoBehaviour:
   movSpeed: 6
   ep: {fileID: 1744704994}
   ut: {fileID: 0}
+  scratch: {fileID: 0}
+  sb: {fileID: 0}
+  walko: {fileID: 0}
+  swingo: {fileID: 0}
+  hito: {fileID: 0}
+  brako: {fileID: 0}
+  openo: {fileID: 0}
+  walk: {fileID: 0}
+  swing: {fileID: 0}
+  hit: {fileID: 0}
+  brak: {fileID: 0}
+  open: {fileID: 0}
 --- !u!212 &663572224
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2399,6 +2411,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a3e1d7b40f50e74fbb37b50c3b9d975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  A: {fileID: 0}
+  S: {fileID: 0}
+  D: {fileID: 0}
+  W: {fileID: 0}
+  E: {fileID: 0}
+  F: {fileID: 0}
 --- !u!4 &664002528
 Transform:
   m_ObjectHideFlags: 0

@@ -50,6 +50,10 @@ public class Controller : MonoBehaviour
         hit = hito.GetComponent<AudioSource>();
         brak = brako.GetComponent<AudioSource>();
         open = openo.GetComponent<AudioSource>();
+        if(brak == null)
+        {
+            brak = brako.GetComponent<AudioSource>();
+        }
 
 
         foreach (GameObject scrat in scrathL)
@@ -100,7 +104,10 @@ public class Controller : MonoBehaviour
                 {
                     if(sb.onScratch == true)
                     {
-                        brak.Play();
+                        if (brak != null)
+                        {
+                            brak.Play();
+                        }
                         sb.Break();
                     }
                 }
