@@ -79,6 +79,7 @@ public class cursosPlace : MonoBehaviour
                         gameStates.noControl = true;
                         colorChange.color = new Color(0f, 0f, 0f, 1f);
                     }
+
                 }
 
                 if (hit.collider.tag == "A")

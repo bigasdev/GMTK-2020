@@ -16,6 +16,14 @@ public class gameStates : MonoBehaviour
     public static bool restarted;
     public static bool respawned;
 
+    public SpriteRenderer A;
+    public SpriteRenderer S;
+    public SpriteRenderer D;
+    public SpriteRenderer W;
+    public SpriteRenderer E;
+    public SpriteRenderer F;
+
+
     private void Update()
     {
         if(restarted)
@@ -43,6 +51,13 @@ public class gameStates : MonoBehaviour
 
     public void Reseta()
     {
+        A.color = new Color(1f, 1f, 1f, 1f);
+        S.color = new Color(1f, 1f, 1f, 1f);
+        D.color = new Color(1f, 1f, 1f, 1f);
+        E.color = new Color(1f, 1f, 1f, 1f);
+        F.color = new Color(1f, 1f, 1f, 1f);
+        W.color = new Color(1f, 1f, 1f, 1f);
+               
         noA = false;
         noD = false;
         noS = false;
@@ -50,6 +65,6 @@ public class gameStates : MonoBehaviour
         noE = false;
         noF = false;
         noControl = false;
-        respawned = false;
+        respawned = false;      
     }
 }
