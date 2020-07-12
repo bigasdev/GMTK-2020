@@ -16,6 +16,18 @@ public class Controller : MonoBehaviour
     private GameObject[] scrathL;
     private GameObject[] doorL;
 
+    public GameObject walko;
+    public GameObject swingo;
+    public GameObject hito;
+    public GameObject brako;
+    public GameObject openo;
+
+
+    public AudioSource walk;
+    public AudioSource swing;
+    public AudioSource hit;
+    public AudioSource brak;
+    public AudioSource open;
 
     void Start()
     {
@@ -27,7 +39,20 @@ public class Controller : MonoBehaviour
         scrathL = GameObject.FindGameObjectsWithTag("Scratch");
         doorL = GameObject.FindGameObjectsWithTag("Door");
 
-        foreach(GameObject scrat in scrathL)
+        walko = GameObject.Find("Walk");
+        swingo = GameObject.Find("Swing");
+        hito = GameObject.Find("Hit");
+        brako = GameObject.Find("Door");
+        openo = GameObject.Find("Break");
+
+        walk = walko.GetComponent<AudioSource>();
+        swing = swingo.GetComponent<AudioSource>();
+        hit = hito.GetComponent<AudioSource>();
+        brak = brako.GetComponent<AudioSource>();
+        open = openo.GetComponent<AudioSource>();
+
+
+        foreach (GameObject scrat in scrathL)
         {
             if (Vector2.Distance(scrat.transform.position, transform.position) < 1)
             {
@@ -53,6 +78,7 @@ public class Controller : MonoBehaviour
                 {
                     if (ut.onDoor == true)
                     {
+                        open.Play();
                         ut.Open();
                     }
                 }
@@ -60,11 +86,13 @@ public class Controller : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.F) && gameStates.noF == false)
             {
                 anim.SetTrigger("Attack");
-                
+                swing.Play();
+
                 if(ep != null){
                     if (ep.onGuard == true)
-                    {
-                        ep.Attack();
+                    { 
+                        hit.Play();
+                        ep.Attack();                      
                     }
                 }
 
@@ -72,6 +100,7 @@ public class Controller : MonoBehaviour
                 {
                     if(sb.onScratch == true)
                     {
+                        brak.Play();
                         sb.Break();
                     }
                 }
@@ -138,6 +167,7 @@ public class Controller : MonoBehaviour
             if(playerInput.x == 1 || playerInput.x == -1 || playerInput.y == 1 || playerInput.y == -1)
             {
                 anim.SetBool("walk", true);
+                walk.Play();
             }
             else
             {

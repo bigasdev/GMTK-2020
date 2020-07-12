@@ -27,6 +27,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Control.unity
     guid: 625ff744355aea94e923a9bdd92b8cf4
   - enabled: 1
-    path: Assets/Scenes/Next.unity
+    path: Assets/Scenes/Room1.unity
     guid: f711f1bedf902314d9286e7d58138364
   m_configObjects: {}

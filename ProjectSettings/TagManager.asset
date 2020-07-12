@@ -14,6 +14,8 @@ TagManager:
   - Bag
   - Scratch
   - Door
+  - Global
+  - GlobalOST
   layers:
   - Default
   - TransparentFX
