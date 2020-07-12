@@ -50,4 +50,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Room8.unity
     guid: 836f373961625c24eb232d06b046fce9
+  - enabled: 1
+    path: Assets/Scenes/Room9.unity
+    guid: 7c0a8e3ab6074254b9152dd87d66e61f
+  - enabled: 1
+    path: Assets/Scenes/Room10.unity
+    guid: a3f3a60570109e544806a0b9e3169209
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: c45f566495fa45144913eb62b3773007
   m_configObjects: {}
