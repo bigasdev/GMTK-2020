@@ -8,12 +8,26 @@ public class mainMenu : MonoBehaviour
     public GameObject logo;
     public GameObject MainMenu;
     public GameObject creditsMenu;
+    public GameObject musicMenu;
     public AudioSource click;
     public void Play()
     {
         SceneManager.LoadScene(1);
         logo.SetActive(false);
     }
+
+    public void MusicSelect()
+    {
+        MainMenu.SetActive(false);
+        musicMenu.SetActive(true);
+    }
+
+    public void BackMusic()
+    {
+        musicMenu.SetActive(false);
+        MainMenu.SetActive(true);
+    }
+
 
     public void Music()
     {
